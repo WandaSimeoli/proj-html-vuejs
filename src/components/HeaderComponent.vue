@@ -13,6 +13,7 @@ export default {
 
 <template>
 <header class="debug">
+  <!-- Header top con indirizzo, mail, orario e social -->
   <section class="header-top p-2">
   <div class="my-container">
       <div class="row justify-content-between">
@@ -26,13 +27,15 @@ export default {
       </div>
     </div>
   </section>
+  <!-- Nav bar con logo e carrello -->
   <section class="header-bottom p-2">
     <div class="my-container">
       <div class="row">
         <div class="col">
-          <img src="../assets/img/logo.png" alt="">
+          <img src="../assets/img/logo.png" alt="Logo Gogrin">
         </div>
         <div class="col">
+          <!-- Voci del menù con dropdown -->
           <nav class="navbar navbar-expand-lg text-uppercase">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -83,12 +86,14 @@ export default {
             </div>
           </nav>
         </div>
+        <!-- Carrello -->
           <div class="col">
             <button class="p-3 text-uppercase text-white">Order Now</button>
           </div>
         </div>
       </div>
   </section>
+  <!-- Jumbotron con buttons -->
   <section class="jumbotron text-white p-4">
     <h3 class="text-uppercase text-center">Gogrin ogranic food store</h3>
     <h1 class="text-center fw-bolder fs-1">Eating naturally & organic is 
