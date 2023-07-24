@@ -13,6 +13,7 @@ export default {
 
 <template>
 <main>
+  <!-- Sezione a 3 colonne con descrizione e marchio -->
   <section class="description debug position-relative">
     <div class="my-container debug">
       <div class="row">
@@ -31,6 +32,7 @@ export default {
           <img src="../assets/img/fe-shap1-1.png" alt="Marchio 100% Natural" class="position-absolute top-0 end-0">
         </div>
       </div>
+      <!-- Riga con 4 colonne e immagini -->
       <div class="row">
         <div class="col">
           <img src="../assets/img/fe3.jpg" alt="">
@@ -47,9 +49,13 @@ export default {
       </div>
     </div>
   </section>
-  <section>
-    <div class="container-md debug">
-
+  <!-- Sezione shop -->
+  <section class="container-md debug my-3 products">
+    <div class="my-container">
+      <p class="orange text-center pt-5">Trending Online Store</p>
+      <h3 class="text-white text-uppercase text-center">Gogrin all <span>organic</span> food</h3>
+      <p class="orange text-center">Trending Online Store</p>
+      <h3 class="text-white text-uppercase text-center">Gogrin all <span>organic</span> food</h3>
     </div>
   </section>
 </main>
@@ -62,9 +68,16 @@ main {
 color: #007166;
 
 }
-span {
+span, .orange {
   color: #EF9E03;
 }
 }
+.products {
+  background-image: url(../assets/img/shop-bg-img.jpg);
+  a {
+    text-align: center;
+  }
+}
+
 
 </style>
