@@ -16,5 +16,4 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "assets/scss/main.scss" as *;
 </style>
