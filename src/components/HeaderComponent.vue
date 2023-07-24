@@ -12,9 +12,123 @@ export default {
 </script>
 
 <template>
-
+<header class="debug">
+  <section class="header-top p-2">
+  <div class="my-container">
+      <div class="row justify-content-between">
+        <div class="col text-white">
+          <span><a href="">North baukhula, tala, USA</a></span>
+          <span><a href="">demo@example.com</a></span>
+        </div>
+        <div class="col text-end">
+          <span>8.30AM-8.30AM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="header-bottom p-2">
+    <div class="my-container">
+      <div class="row">
+        <div class="col">
+          <img src="../assets/img/logo.png" alt="">
+        </div>
+        <div class="col">
+          <nav class="navbar navbar-expand-lg text-uppercase">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">  
+                    <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                  <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Action</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Other</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Service</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Other</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Other</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Other</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+          <div class="col">
+            <button class="p-3 text-uppercase text-white">Order Now</button>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="jumbotron text-white p-4">
+    <h3 class="text-uppercase text-center">Gogrin ogranic food store</h3>
+    <h1 class="text-center fw-bolder fs-1">Eating naturally & organic is 
+      <br> always be healthy</h1>
+      <button class="p-3 text-uppercase text-white">About us</button>
+      <button class="p-3 text-uppercase text-white">our history</button>
+  </section>
+</header>
 </template>
 
 <style scoped lang="scss">
+@use "../assets/scss/main.scss";
+  .header-top {
+      background-color: #007166;
+      color: white;
+
+    a {
+      text-decoration: none;
+      margin: 10px;
+      color: white;
+    }
+  }
+    button {
+      background-color: #EF9E03;
+      border-radius: 0 10px 0 10px;
+      border: none;
+    }
+    .jumbotron {
+      background-image: url(../assets/img/H3-slider3.jpg);
+      height: 800px;
+      h3 {
+        margin-top: 300px;
+      }
+      button:first-of-type {
+        margin-left: 600px;
+      }
+      button:last-child {
+        margin-left: 10px;
+        background-color: #007166;
+      }
+   }
 
 </style>
