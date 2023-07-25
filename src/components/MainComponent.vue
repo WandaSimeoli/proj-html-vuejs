@@ -70,10 +70,25 @@ export default {
       <div class="row debug" >
         <div class="card m-3" style="width: 16rem;" v-for="(singleProduct, i) in store.products" :key='i'>
           <img :src="singleProduct.image" class="card-img-top" alt="">
-          <h3 class="card-title text-center text-white">{{ singleProduct.title }}</h3>
+          <h5 class="card-title text-center text-white">{{ singleProduct.title }}</h5>
           <p class="card-text text-center">{{ singleProduct.price }}</p>
         </div>
       </div>  
+      <button class="p-3 text-uppercase text-white">All products</button>
+    </div>
+  </section>
+  <section>
+    <div class="my-container debug">
+      <p class="fw-bold text-center lh-lg"> "Dessert pudding dessert jelly beans cupcake sweet caramels gingerbread. Fruitcake biscuit chessecake. <br>
+        Cookie topping sweets muffine pudding tart bear claw sugar plum croissant." We started as a small legal consultancy. <br>
+        We have proved our competence and had many satisfied clients.
+      </p>
+      <h5 class="text-dark text-center fw-bolder">Martha Alex</h5>
+      <div class="orange text-center fw-bolder mb-3">Manager</div>
+      <div class="row debug">
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
     </div>
   </section>
 </main>
@@ -104,6 +119,14 @@ span, .orange {
       color: #EF9E03;
     }
   }
+  button {
+      background-color: #EF9E03;
+      border-radius: 0 10px 0 10px;
+      border: none;
+      margin-left: 500px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
 }
 
 </style>
