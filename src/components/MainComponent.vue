@@ -1,11 +1,11 @@
 <script>
-
+import { store } from '../store.js';
 export default {
   components :{
   },
 
   data() {
-    return {  }
+    return { store }
   },
   methods: {}
 }
@@ -50,17 +50,34 @@ export default {
     </div>
   </section>
   <!-- Sezione shop -->
-  <section class="container-md debug my-3 products">
-    <div class="my-container">
-      <p class="orange text-center pt-5">Trending Online Store</p>
-      <h3 class="text-white text-uppercase text-center">Gogrin all <span>organic</span> food</h3>
-      <p class="orange text-center">Trending Online Store</p>
-      <h3 class="text-white text-uppercase text-center">Gogrin all <span>organic</span> food</h3>
+  <section class="container-md debug my-5 products">
+    <div class="my-container debug pt-5">
+      <div class="title" v-for="i in 2" :key="i">
+        <p class="orange text-center">Trending Online Store</p>
+        <h3 class="text-white text-uppercase text-center">Gogrin all <span>organic</span> food</h3>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-sm debug">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent ">
+            <ul class="navbar-nav ">
+              <li class="nav-item " v-for="(singleLink, i) in store.links" :key='i'>
+                <a class="nav-link active text-white p-4 " aria-current="page" href="#">{{ singleLink }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="row debug" >
+        <div class="card m-3" style="width: 16rem;" v-for="(singleProduct, i) in store.products" :key='i'>
+          <img :src="singleProduct.image" class="card-img-top" alt="">
+          <h3 class="card-title text-center text-white">{{ singleProduct.title }}</h3>
+          <p class="card-text text-center">{{ singleProduct.price }}</p>
+        </div>
+      </div>  
     </div>
   </section>
 </main>
 </template>
-
 <style scoped lang="scss">
 main {
   margin: 40px;
@@ -77,7 +94,16 @@ span, .orange {
   a {
     text-align: center;
   }
+  nav {
+    margin-left: 300px;
+  }
+  .card {
+    background-color: transparent;
+    border: none;
+    p {
+      color: #EF9E03;
+    }
+  }
 }
-
 
 </style>
