@@ -53,9 +53,10 @@ export default {
   <section class="container-md debug my-5 products">
     <div class="my-container debug pt-5">
       <div class="title" v-for="i in 2" :key="i">
-        <p class="orange text-center">Trending Online Store</p>
-        <h3 class="text-white text-uppercase text-center">Gogrin all <span>organic</span> food</h3>
+        <p class="orange text-center fw-bold">Trending Online Store</p>
+        <h3 class="text-white text-uppercase text-center fw-bold">Gogrin all <span>organic</span> food</h3>
       </div>
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg">
         <div class="container-sm debug">
           <div class="collapse navbar-collapse" id="navbarSupportedContent ">
@@ -67,17 +68,24 @@ export default {
           </div>
         </div>
       </nav>
+      <!-- Lista dei prodotti -->
       <div class="row debug" >
-        <div class="card m-3" style="width: 16rem;" v-for="(singleProduct, i) in store.products" :key='i'>
+        <div class="col-3 m-3 position-relative cards" style="width: 16rem;" v-for="(singleProduct, i) in store.products" :key='i'>
           <img :src="singleProduct.image" class="card-img-top" alt="">
+          <div v-if="singleProduct.discount === true" class="sale text-white text-uppercase fw-bold fs-6"> Sale! </div>
           <h5 class="card-title text-center text-white">{{ singleProduct.title }}</h5>
-          <p class="card-text text-center">{{ singleProduct.price }}</p>
+          <div class="d-flex justify-content-center">
+            <p class="card-text text-decoration-line-through me-2 opacity-75" v-if="singleProduct.discount === true">{{ singleProduct.price }}</p>
+          <p class="card-text fs-5" v-if="singleProduct.discount === true">{{ singleProduct.newPrice }}</p>
+          <p class="card-text fs-5" v-if="singleProduct.discount === false">{{ singleProduct.price }}</p>
+          </div>
         </div>
       </div>  
       <button class="p-3 text-uppercase text-white">All products</button>
     </div>
   </section>
   <section>
+    <!-- Citazione -->
     <div class="my-container debug">
       <p class="fw-bold text-center lh-lg"> "Dessert pudding dessert jelly beans cupcake sweet caramels gingerbread. Fruitcake biscuit chessecake. <br>
         Cookie topping sweets muffine pudding tart bear claw sugar plum croissant." We started as a small legal consultancy. <br>
@@ -85,24 +93,45 @@ export default {
       </p>
       <h5 class="text-dark text-center fw-bolder">Martha Alex</h5>
       <div class="orange text-center fw-bolder mb-3">Manager</div>
+      <!-- Sconti con link allo shop -->
       <div class="row debug">
-        <div class="col"></div>
-        <div class="col"></div>
+        <div class="col bg-img-1 position-relative">
+          <h2 class="text-white p-4">Fresh gurden tomato combo offer...$37</h2>
+          <a href="" class="text-white text-decoration-none text-uppercase p-4 fw-bold">Shop Now</a>
+        </div>
+        <div class="col bg-img-2 position-relative">
+          <h2 class="text-white p-4">Some ogranic healthy fruits combo offer...$49</h2>
+          <a href="" class="text-white text-decoration-none text-uppercase p-4 fw-bold">Shop Now</a>
+        </div>
       </div>
     </div>
+  </section>
+  <section class=" bg-green position-relative debug">
+    <!-- Numeri e dati -->
+    <div class="my-container ">
+      <div class="row justify-content-center">
+        <div class="col-3 px-1 pt-4" v-for="(singleCount, i) in store.counter" :key='i'>
+          <div class="fs-1 fw-bold orange text-center">{{ singleCount.count }}</div>
+          <p class="text-white fs-5 fw-bold text-center">{{ singleCount.subtitle }}</p>
+         <img :src="singleCount.counterImage" alt="" class="py-2">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="trend my-5"> 
+    <div class="orange text-center fw-bold fs-5">Running week top selling</div>
+    <h3 class="green text-uppercase text-center fw-bold">Top <span>trending</span> organic food</h3>
   </section>
 </main>
 </template>
 <style scoped lang="scss">
 main {
   margin: 40px;
-  h3 {
+  h3, .green {
 color: #007166;
-
 }
 span, .orange {
   color: #EF9E03;
-}
 }
 .products {
   background-image: url(../assets/img/shop-bg-img.jpg);
@@ -112,11 +141,19 @@ span, .orange {
   nav {
     margin-left: 300px;
   }
-  .card {
+  .cards {
     background-color: transparent;
     border: none;
     p {
       color: #EF9E03;
+    }
+    .sale {
+      background-color: #EF9E03;
+      padding: 5px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      border-radius: 2px;
     }
   }
   button {
@@ -128,5 +165,41 @@ span, .orange {
       margin-bottom: 50px;
     }
 }
+  .bg-img-1 {
+    background-image: url(../assets/img/offer-img01.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+
+    a {
+      position: absolute;
+      bottom: 30px;
+    }
+  }
+  .bg-img-2 {
+    background-image: url(../assets/img/offer-img02.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    a {
+      position: absolute;
+      bottom: 30px;
+    }
+  }
+  .bg-green {
+    background-image: url(../assets/img/counter-bg.jpg);
+    height: 200px;
+
+    img {
+      position: absolute;
+      top: 10px;
+    }
+  }
+  .trend {
+    background-image: url(../assets/img/title-shap.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
 
 </style>

@@ -6,45 +6,81 @@ export const store = reactive (
         products : [
             {
                 title: 'Fress Apple',
-                image: "./assets/img/s5.jpg" ,
+                image: "/img/s5.jpg" ,
                 price: '$18',
+                discount : false,
+               
             },
             {
                 title: 'Fress Cobies',
-               image: '../assets/img/s2.jpg',
+               image: '/img/s2.jpg',
                 price: '$17',
+                discount : true,
+                newPrice: '$17',
+                
             },
             {
                 title: 'Fresh Watermelon',
-               image: '../assets/img/s8.jpg',
-                price: '$15',
+               image: '/img/s8.jpg',
+                price: '$20',
+                discount : false,
             },
             {
                 title: 'Organic Juice',
-               image: '../assets/img/s1.jpg',
+               image: '/img/s1.jpg',
                 price: '$15',
+                discount : true,
+                newPrice: '$15',
             },
             {
                 title: 'Fresh Blueberries',
-               image: '../assets/img/s4.jpg',
-                price: '$14',
+               image: '/img/s4.jpg',
+                price: '$19',
+                discount : true,
+                newPrice: '$14',
             },
             {
                 title: 'Organic Letus',
-               image: '../assets/img/s10.jpg',
+               image: '/img/s10.jpg',
                 price: '$23',
+                discount : false,
             },
             {
                 title: 'Red Gajor',
-               image: '../assets/img/s9.jpg',
-                price: '$26',
+               image: '/img/s9.jpg',
+                price: '$29',
+                discount : true,
+                newPrice: '$26',
             },
             {
                 title: 'Naga Pepper',
-               image: '../assets/img/s7.jpg',
+               image: '/img/s7.jpg',
                 price: '$21',
+                discount : false,
             },
-        ]
+        ],
+        counter :[
+            {
+             count : '20+',
+             subtitle: 'Years of Experienced',
+           
+            },
+            {
+                count : '200+',
+                subtitle: 'Everyday Online Delivery',
+                counterImage:'img/counter-shap1.png',
+               },
+               {
+                count : '20K',
+                subtitle: 'Client Satisfaction',
+                counterImage:'img/counter-shap1.png',
+               },
+               {
+                count : '30+',
+                subtitle: 'Award Winning',
+                counterImage:'img/counter-shap1.png',
+               },
+        ],
     }
     
 );
