@@ -9,15 +9,13 @@ export const store = reactive (
                 image: "/img/s5.jpg" ,
                 price: '$18',
                 discount : false,
-               
             },
             {
                 title: 'Fress Cobies',
                image: '/img/s2.jpg',
                 price: '$17',
                 discount : true,
-                newPrice: '$17',
-                
+                newPrice: '$16',
             },
             {
                 title: 'Fresh Watermelon',
@@ -28,7 +26,7 @@ export const store = reactive (
             {
                 title: 'Organic Juice',
                image: '/img/s1.jpg',
-                price: '$15',
+                price: '$20',
                 discount : true,
                 newPrice: '$15',
             },
@@ -81,6 +79,29 @@ export const store = reactive (
                 counterImage:'img/counter-shap1.png',
                },
         ],
-    }
-    
+        articles : [
+            {
+                image: 'img/blo1-390x250.jpg',
+                author: 'Gogrin',
+                date:'17 Dec 2022',
+                title: 'Where I live,I am surrounded by fresh, organic food, so I eat really well.',
+                preview: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium nihil laboriosam earum dolore suscipit'
+            },
+            {
+                image: 'img/blo2-390x250.jpg',
+                author: 'Gogrin',
+                date:'16 Dec 2022',
+                title: 'What we get at home is 100% organic food. We are also 90% vegetarian.',
+                preview: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium nihil laboriosam earum dolore suscipit'
+            },
+            {
+                image: 'img/blo3-390x250.jpg',
+                author: 'Gogrin',
+                date:'15 Dec 2022',
+                title: 'If we as a society are willing to have a preference for organic food farmer.',
+                preview: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium nihil laboriosam earum dolore suscipit'
+            },
+        ]
+    },
+   
 );

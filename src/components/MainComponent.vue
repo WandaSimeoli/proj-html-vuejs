@@ -7,7 +7,12 @@ export default {
   data() {
     return { store }
   },
-  methods: {}
+  methods: {},
+  computed : {
+    firstFourProducts() {
+      return this.store.products.slice(0,4);
+    }
+  }
 }
 </script>
 
@@ -19,12 +24,12 @@ export default {
       <div class="row">
         <div class="col-4">
           <h3 class="fw-bold fs-2">
-            <span>Look what</span> consumer power has done with <span>organic food;</span>we can do to the same with clothes
+            <span class="orange">Look what</span> consumer power has done with <span class="orange">organic food;</span>we can do to the same with clothes
           </h3>
         </div>
         <div class="col-5">
           <p class="fs-6 fw-light">I have need to make these sorts of connections literal sometimes, and a vehicle often helps to do that. I have a relationship to hosting culture, 
-            <span>It isn't really about it helps to do that.  I have a relationship to hosting culture.</span>
+            <span class="orange">It isn't really about it helps to do that.  I have a relationship to hosting culture.</span>
           </p>
           <p class="fs-6 fw-light">Need to make these sorts of connections literal sometimes, and a vehicle often helps to do that, I have a relationship to hosting culture.</p>
         </div>
@@ -54,7 +59,7 @@ export default {
     <div class="my-container debug pt-5">
       <div class="title" v-for="i in 2" :key="i">
         <p class="orange text-center fw-bold">Trending Online Store</p>
-        <h3 class="text-white text-uppercase text-center fw-bold">Gogrin all <span>organic</span> food</h3>
+        <h3 class="text-white text-uppercase text-center fw-bold">Gogrin all <span class="orange">organic</span> food</h3>
       </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg">
@@ -70,7 +75,7 @@ export default {
       </nav>
       <!-- Lista dei prodotti -->
       <div class="row debug" >
-        <div class="col-3 m-3 position-relative cards" style="width: 16rem;" v-for="(singleProduct, i) in store.products" :key='i'>
+        <div class="col-3 m-3 position-relative cards border-0" style="width: 16rem;" v-for="(singleProduct, i) in store.products" :key='i'>
           <img :src="singleProduct.image" class="card-img-top" alt="">
           <div v-if="singleProduct.discount === true" class="sale text-white text-uppercase fw-bold fs-6"> Sale! </div>
           <h5 class="card-title text-center text-white">{{ singleProduct.title }}</h5>
@@ -118,9 +123,59 @@ export default {
       </div>
     </div>
   </section>
-  <section class="trend my-5"> 
-    <div class="orange text-center fw-bold fs-5">Running week top selling</div>
-    <h3 class="green text-uppercase text-center fw-bold">Top <span>trending</span> organic food</h3>
+  <section class=" my-5"> 
+    <!-- Top trending -->
+    <div class="my-container">
+      <div class="trend">
+        <div class="orange text-center fw-bold fs-5">Running week top selling</div>
+        <h3 class="green text-uppercase text-center fw-bold">Top <span class="orange">trending</span> organic food</h3>
+      </div>
+      <div class="row debug my-4">
+        <div class="col-3 m-3 position-relative cards border border-success border-opacity-10" style="width: 16rem;" v-for="(singleProduct, i) in firstFourProducts" :key='i'>
+          <img :src="singleProduct.image" class="card-img-top" alt="">
+          <div v-if="singleProduct.discount === true" class="sales text-white text-uppercase fw-bold fs-6"> Sale! </div>
+          <h5 class="card-title text-center">{{ singleProduct.title }}</h5>
+          <div class="d-flex justify-content-center">
+            <p class="card-text text-decoration-line-through me-2 opacity-75 fw-lighter" v-if="singleProduct.discount === true">{{ singleProduct.price }}</p>
+            <p class="card-text fs-6 text-decoration-underline fw-lighter" v-if="singleProduct.discount === true">{{ singleProduct.newPrice }}</p>
+            <p class="card-text fs-6 fw-lighter" v-if="singleProduct.discount === false">{{ singleProduct.price }}</p>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </section>
+  <section class="contacts">
+    <div class="my-container debug p-3">
+      <p class="text-white text-uppercase text-center fw-bold mt-5">here you can 100% fresh organic food</p>
+      <h2 class="text-white text-center fw-bold">Best organic food up to 25% off for all product</h2>
+      <p class="text-white text-center mb-5">The most beautiful people we have known are those who have known defeat, known suffering, known struggle, known loss,
+        and have found their way out of those depths. he most beautiful people we have known are those who have known defeat, known suffering
+      </p>
+      <button class="p-3 text-white rounded me-4">+088123 56 906</button>
+      <button class="p-3 text-white text-uppercase rounded">Apointment</button>
+    </div>
+  </section>
+  <section class="my-5">
+    <div class="my-container">
+      <div class="trend">
+        <div class="orange text-center fw-bold fs-5">The news what we have</div>
+        <h3 class="green text-uppercase text-center fw-bolder">Gogrin latest <span class="orange">news</span> feed</h3>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="my-container">
+      <div class="row">
+      <div class="col m-3 border-0" style="width: 16rem;" v-for="(singleArticle, i) in store.articles" :key='i'>
+        <img :src="singleArticle.image" alt="" class="card-img-top mb-2">
+        <span class="card-subtitle me-2  opacity-75">{{ singleArticle.author }}</span> 
+        <span class="card-subtitle mb-2 fs-6 opacity-75"> {{ singleArticle.date }}</span>
+        <h5 class="card-title green fw-bold mt-2">{{ singleArticle.title }}</h5>
+        <p class="card-text opacity-75">{{ singleArticle.preview }}</p>
+        <a href="" class="text-decoration-none green text-uppercase">Read more...</a>
+      </div>
+    </div>
+    </div>
   </section>
 </main>
 </template>
@@ -130,7 +185,7 @@ main {
   h3, .green {
 color: #007166;
 }
-span, .orange {
+ .orange {
   color: #EF9E03;
 }
 .products {
@@ -143,17 +198,8 @@ span, .orange {
   }
   .cards {
     background-color: transparent;
-    border: none;
     p {
       color: #EF9E03;
-    }
-    .sale {
-      background-color: #EF9E03;
-      padding: 5px;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      border-radius: 2px;
     }
   }
   button {
@@ -165,6 +211,14 @@ span, .orange {
       margin-bottom: 50px;
     }
 }
+.sales {
+      background-color: #EF9E03;
+      padding: 5px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      border-radius: 2px;
+    }
   .bg-img-1 {
     background-image: url(../assets/img/offer-img01.jpg);
     height: 300px;
@@ -186,6 +240,7 @@ span, .orange {
   }
   .bg-green {
     background-image: url(../assets/img/counter-bg.jpg);
+    background-size: contain;
     height: 200px;
 
     img {
@@ -198,6 +253,18 @@ span, .orange {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+  .contacts {
+    background-image: url(../assets/img/call-to-bg.jpg);
+    height: 400px;
+
+  button:first-of-type {
+    background-color: #EF9E03;
+    margin-left: 400px;
+  }
+  button {
+    background-color: #007166;
+  }
   }
 }
 
