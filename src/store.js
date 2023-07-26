@@ -82,6 +82,7 @@ export const store = reactive (
         articles : [
             {
                 image: 'img/blo1-390x250.jpg',
+                smallImage: 'img/blo1-100x100.jpg',
                 author: 'Gogrin',
                 date:'17 Dec 2022',
                 title: 'Where I live,I am surrounded by fresh, organic food, so I eat really well.',
@@ -89,6 +90,7 @@ export const store = reactive (
             },
             {
                 image: 'img/blo2-390x250.jpg',
+                smallImage: 'img/blo2-100x100.jpg',
                 author: 'Gogrin',
                 date:'16 Dec 2022',
                 title: 'What we get at home is 100% organic food. We are also 90% vegetarian.',
@@ -102,7 +104,8 @@ export const store = reactive (
                 preview: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium nihil laboriosam earum dolore suscipit'
             },
         ],
-        logos :[ 'img/brand1.png', 'img/brand4.png','img/brand3.png','img/brand1.png','img/brand2.png',]
+        logos :[ 'img/brand1.png', 'img/brand4.png','img/brand3.png','img/brand1.png','img/brand2.png',],
+    footerLinks : ['Organic Food Shop', 'Our Term & Condition', 'Gogrin Faq Section','Our Team Member', 'Our Latest News Feed'],
+    footerImage : ['img/blo1-70x70.jpg', 'img/blo9-70x70.jpg','img/blo8-70x70.jpg','img/blo7-70x70.jpg','img/blo4-70x70.jpg','img/blo3-70x70.jpg',]
     },
-   
 );

@@ -89,8 +89,8 @@ export default {
       <button class="p-3 text-uppercase text-white">All products</button>
     </div>
   </section>
+      <!-- Citazione -->
   <section>
-    <!-- Citazione -->
     <div class="my-container debug">
       <p class="fw-bold text-center lh-lg"> "Dessert pudding dessert jelly beans cupcake sweet caramels gingerbread. Fruitcake biscuit chessecake. <br>
         Cookie topping sweets muffine pudding tart bear claw sugar plum croissant." We started as a small legal consultancy. <br>
@@ -111,8 +111,8 @@ export default {
       </div>
     </div>
   </section>
+      <!-- Numeri e dati -->
   <section class=" bg-green position-relative debug">
-    <!-- Numeri e dati -->
     <div class="my-container ">
       <div class="row justify-content-center">
         <div class="col-3 px-1 pt-4" v-for="(singleCount, i) in store.counter" :key='i'>
@@ -123,8 +123,8 @@ export default {
       </div>
     </div>
   </section>
-  <section class=" my-5"> 
     <!-- Top trending -->
+  <section class=" my-5"> 
     <div class="my-container">
       <div class="trend">
         <div class="orange text-center fw-bold fs-5">Running week top selling</div>
@@ -144,6 +144,7 @@ export default {
       </div>  
     </div>
   </section>
+    <!-- Sezione dei contatti con numeri di telefono e appuntamenti -->
   <section class="contacts">
     <div class="my-container debug p-3">
       <p class="text-white text-uppercase text-center fw-bold mt-5">here you can 100% fresh organic food</p>
@@ -163,6 +164,7 @@ export default {
       </div>
     </div>
   </section>
+     <!-- Articoli -->
   <section>
     <div class="my-container">
       <div class="row">
@@ -177,7 +179,8 @@ export default {
     </div>
     </div>
   </section>
-  <section>
+     <!-- Colonne con loghi -->
+  <section class="logos">
     <div class="my-container">
       <div class="row">
         <div class="col" v-for="(singleLogo, i ) in store.logos" :key="i">
@@ -186,7 +189,8 @@ export default {
       </div>
     </div>
   </section>
-  <section class="mt-5">
+   <!-- Form con input mail e submit -->
+  <section class="mt-5 position-relative">
     <div class="my-container form">
       <div class="row p-5">
         <div class="col">
@@ -196,7 +200,7 @@ export default {
           <form action="">
             <div class="input-group mb-3">
           <input type="email" class="form-control rounded-0" placeholder="your email" aria-label="your email" aria-describedby="button-addon2">
-          <button class="btn text-white text-uppercase rounded-0 p-3 w-25" type="button" id="button-addon2">Send</button>
+          <button class="btn text-white text-uppercase rounded-0 p-3 w-25" type="submit" id="button-addon2">Send</button>
           </div>
           </form>
         </div>
@@ -292,13 +296,20 @@ color: #007166;
     background-color: #007166;
   }
   }
+  .logos {
+    margin-bottom: 200px;
+  }
   .form {
     background-image: url(../assets/img/milesim-bg.jpg);
-
+    position: absolute;
+    bottom: -100px;
+    left: 200px;
+    width: 1100px;
+  }
     button {
       background-color: #007166;
     }
-  }
+
 }
 
 
