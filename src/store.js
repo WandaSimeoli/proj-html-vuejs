@@ -101,7 +101,8 @@ export const store = reactive (
                 title: 'If we as a society are willing to have a preference for organic food farmer.',
                 preview: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium nihil laboriosam earum dolore suscipit'
             },
-        ]
+        ],
+        logos :[ 'img/brand1.png', 'img/brand4.png','img/brand3.png','img/brand1.png','img/brand2.png',]
     },
    
 );

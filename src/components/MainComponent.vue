@@ -177,6 +177,32 @@ export default {
     </div>
     </div>
   </section>
+  <section>
+    <div class="my-container">
+      <div class="row">
+        <div class="col" v-for="(singleLogo, i ) in store.logos" :key="i">
+          <img :src="singleLogo" alt="" class="mt-5 px-4">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-5">
+    <div class="my-container form">
+      <div class="row p-5">
+        <div class="col">
+          <h2 class="text-white text-uppercase fw-bold">Subscribe our newsletter</h2>
+        </div>
+        <div class="col">
+          <form action="">
+            <div class="input-group mb-3">
+          <input type="email" class="form-control rounded-0" placeholder="your email" aria-label="your email" aria-describedby="button-addon2">
+          <button class="btn text-white text-uppercase rounded-0 p-3 w-25" type="button" id="button-addon2">Send</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 </template>
 <style scoped lang="scss">
@@ -265,6 +291,13 @@ color: #007166;
   button {
     background-color: #007166;
   }
+  }
+  .form {
+    background-image: url(../assets/img/milesim-bg.jpg);
+
+    button {
+      background-color: #007166;
+    }
   }
 }
 
