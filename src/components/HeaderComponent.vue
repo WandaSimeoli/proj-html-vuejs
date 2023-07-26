@@ -113,8 +113,8 @@ export default {
     <h3 class="text-uppercase text-center">Gogrin ogranic food store</h3>
     <h1 class="text-center fw-bolder fs-1">Eating naturally & organic is 
       <br> always be healthy</h1>
-      <button class="p-3 text-uppercase text-white">About us</button>
-      <button class="p-3 text-uppercase text-white">our history</button>
+      <button class="p-3 text-uppercase text-white button-1">About us</button>
+      <button class="p-3 text-uppercase text-white button-2">our history</button>
   </section>
 </header>
 </template>
@@ -151,6 +151,12 @@ export default {
       button:last-child {
         margin-left: 10px;
         background-color: #007166;
+      }
+      .button-1:hover {
+        background-color:#007166;
+      }
+      .button-2:hover {
+        background-color: #EF9E03;
       }
    }
 

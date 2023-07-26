@@ -169,7 +169,7 @@ export default {
     </div>
   </section>
      <!-- Articoli -->
-  <section>
+  <section class="articles">
     <div class="my-container">
       <div class="row">
       <div class="col m-3 border-0" style="width: 16rem;" v-for="(singleArticle, i) in store.articles" :key='i'>
