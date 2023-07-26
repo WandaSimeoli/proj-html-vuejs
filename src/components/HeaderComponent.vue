@@ -18,11 +18,24 @@ export default {
   <div class="my-container">
       <div class="row justify-content-between">
         <div class="col text-white">
-          <span><a href="">North baukhula, tala, USA</a></span>
-          <span><a href="">demo@example.com</a></span>
+          <span><a href="">
+            <font-awesome-icon icon="fa-solid fa-location-dot" />
+            North baukhula, tala, USA</a></span>
+          <span><a href="">
+            <font-awesome-icon icon="fa-solid fa-envelope" />
+            demo@example.com</a></span>
         </div>
         <div class="col text-end">
-          <span>8.30AM-8.30AM</span>
+          <span>
+            <font-awesome-icon icon="fa-solid fa-clock" />
+            8.30AM-8.30AM  
+          </span>
+          <span >
+            <font-awesome-icon icon="fa-brands fa-facebook-f" class="mx-2"/>
+            <font-awesome-icon icon="fa-brands fa-twitter" class="mx-2" />
+            <font-awesome-icon icon="fa-brands fa-instagram" class="mx-2"/>
+            <font-awesome-icon icon="fa-brands fa-pinterest-p" class="mx-2"/>
+          </span>
         </div>
       </div>
     </div>
@@ -88,6 +101,8 @@ export default {
         </div>
         <!-- Carrello -->
           <div class="col">
+            <font-awesome-icon icon="fa-solid fa-magnifying-glass" style="color: #ef9e03;" class="p-1 rounded-circle border m-2"/>
+            <font-awesome-icon icon="fa-solid fa-cart-shopping" style="color: #007166;" class="p-1 rounded-circle border m-2"/>
             <button class="p-3 text-uppercase text-white">Order Now</button>
           </div>
         </div>
@@ -114,6 +129,9 @@ export default {
       text-decoration: none;
       margin: 10px;
       color: white;
+    }
+    .orange {
+      color: #EF9E03;
     }
   }
     button {

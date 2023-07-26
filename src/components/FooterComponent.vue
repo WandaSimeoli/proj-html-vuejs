@@ -26,6 +26,10 @@ export default {
         <div class="col">
           <img src="../assets/img/footer-logo.png" alt="" class="mb-4">
           <p class="text-white">War should never be entered upon until every agency of peace hai failed not to be good</p>
+          <font-awesome-icon icon="fa-brands fa-square-facebook" class="mx-2 text-white fs-1"/>
+            <font-awesome-icon icon="fa-brands fa-square-twitter" class="mx-2 text-white fs-1" />
+            <font-awesome-icon icon="fa-brands fa-square-google-plus" class="mx-2 text-white fs-1"/>
+            <font-awesome-icon icon="fa-brands fa-square-pinterest" class="mx-2 text-white fs-1"/>
         </div>
           <!-- Colonna due con lista di link -->
         <div class="col-3">
@@ -66,7 +70,9 @@ export default {
     <div class="my-container">
       <div class="row p-3">
       <div class="col">
-        <p class="text-white">Copyrigth grogrin all rights reserved.</p>
+        <p class="text-white">Copyrigth 
+          <font-awesome-icon icon="fa-regular fa-copyright" class=" text-white"/>
+          grogrin all rights reserved.</p>
       </div>
       <div class="col text-white text-end ">
         <a href="" class="text-white text-decoration-none m-2">Service</a>

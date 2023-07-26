@@ -92,6 +92,8 @@ export default {
       <!-- Citazione -->
   <section>
     <div class="my-container debug">
+      <font-awesome-icon icon="fa-solid fa-quote-left fa" style="color: #007166;" class="fs-1 w-100"/>
+      <i class="fa-solid fa-quote-left" ></i>
       <p class="fw-bold text-center lh-lg"> "Dessert pudding dessert jelly beans cupcake sweet caramels gingerbread. Fruitcake biscuit chessecake. <br>
         Cookie topping sweets muffine pudding tart bear claw sugar plum croissant." We started as a small legal consultancy. <br>
         We have proved our competence and had many satisfied clients.
@@ -152,7 +154,9 @@ export default {
       <p class="text-white text-center mb-5">The most beautiful people we have known are those who have known defeat, known suffering, known struggle, known loss,
         and have found their way out of those depths. he most beautiful people we have known are those who have known defeat, known suffering
       </p>
-      <button class="p-3 text-white rounded me-4">+088123 56 906</button>
+      <button class="p-3 text-white rounded me-4">
+        <font-awesome-icon icon="fa-solid fa-phone-volume"/>
+        +088123 56 906</button>
       <button class="p-3 text-white text-uppercase rounded">Apointment</button>
     </div>
   </section>
@@ -170,8 +174,12 @@ export default {
       <div class="row">
       <div class="col m-3 border-0" style="width: 16rem;" v-for="(singleArticle, i) in store.articles" :key='i'>
         <img :src="singleArticle.image" alt="" class="card-img-top mb-2">
-        <span class="card-subtitle me-2  opacity-75">{{ singleArticle.author }}</span> 
-        <span class="card-subtitle mb-2 fs-6 opacity-75"> {{ singleArticle.date }}</span>
+        <span class="card-subtitle me-2  opacity-75">
+          <font-awesome-icon icon="fa-solid fa-user" style="color: #ef9e03;"/>
+          {{ singleArticle.author }}</span> 
+        <span class="card-subtitle mb-2 fs-6 opacity-75"> 
+          <font-awesome-icon icon="fa-solid fa-clock" style="color: #ef9e03;"/>
+          {{ singleArticle.date }}</span>
         <h5 class="card-title green fw-bold mt-2">{{ singleArticle.title }}</h5>
         <p class="card-text opacity-75">{{ singleArticle.preview }}</p>
         <a href="" class="text-decoration-none green text-uppercase">Read more...</a>
