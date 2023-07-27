@@ -26,10 +26,18 @@ export default {
         <div class="col">
           <img src="../assets/img/footer-logo.png" alt="" class="mb-4">
           <p class="text-white">War should never be entered upon until every agency of peace hai failed not to be good</p>
-          <font-awesome-icon icon="fa-brands fa-square-facebook" class="mx-2 text-white fs-1 icon"/>
+          <a href="">
+            <font-awesome-icon icon="fa-brands fa-square-facebook" class="mx-2 text-white fs-1 icon"/>
+          </a>
+          <a href="">
             <font-awesome-icon icon="fa-brands fa-square-twitter" class="mx-2 text-white fs-1 icon" />
+          </a>
+          <a href="">
             <font-awesome-icon icon="fa-brands fa-square-google-plus" class="mx-2 text-white fs-1 icon"/>
+          </a>
+          <a href="">
             <font-awesome-icon icon="fa-brands fa-square-pinterest" class="mx-2 text-white fs-1 icon"/>
+          </a>
         </div>
           <!-- Colonna due con lista di link -->
         <div class="col-3">

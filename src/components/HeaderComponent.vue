@@ -31,10 +31,18 @@ export default {
             8.30AM-8.30AM  
           </span>
           <span >
-            <font-awesome-icon icon="fa-brands fa-facebook-f" class="mx-2"/>
+            <a href="">
+              <font-awesome-icon icon="fa-brands fa-facebook-f" class="mx-2"/>
+            </a>
+            <a href="">
             <font-awesome-icon icon="fa-brands fa-twitter" class="mx-2" />
+            </a>
+            <a href="">
             <font-awesome-icon icon="fa-brands fa-instagram" class="mx-2"/>
+            </a>
+            <a href="">
             <font-awesome-icon icon="fa-brands fa-pinterest-p" class="mx-2"/>
+            </a>
           </span>
         </div>
       </div>
@@ -101,8 +109,12 @@ export default {
         </div>
         <!-- Carrello -->
           <div class="col">
-            <font-awesome-icon icon="fa-solid fa-magnifying-glass" style="color: #ef9e03;" class="p-1 rounded-circle border m-2"/>
-            <font-awesome-icon icon="fa-solid fa-cart-shopping" style="color: #007166;" class="p-1 rounded-circle border m-2"/>
+            <a href="">
+              <font-awesome-icon icon="fa-solid fa-magnifying-glass" style="color: #ef9e03;" class="p-1 rounded-circle border m-2"/>
+            </a>
+            <a href="">
+              <font-awesome-icon icon="fa-solid fa-cart-shopping" style="color: #007166;" class="p-1 rounded-circle border m-2"/>
+            </a>
             <button class="p-3 text-uppercase text-white">Order Now</button>
           </div>
         </div>

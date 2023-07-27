@@ -77,7 +77,7 @@ export default {
       <div class="row debug" >
         <div class="col-3 m-3 position-relative cards border-0" style="width: 16rem;" v-for="(singleProduct, i) in store.products" :key='i'>
           <img :src="singleProduct.image" class="card-img-top" alt="">
-          <div v-if="singleProduct.discount === true" class="sale text-white text-uppercase fw-bold fs-6"> Sale! </div>
+          <div v-if="singleProduct.discount === true" class="sales text-white text-uppercase fw-bold fs-6"> Sale! </div>
           <h5 class="card-title text-center text-white">{{ singleProduct.title }}</h5>
           <div class="d-flex justify-content-center">
             <p class="card-text text-decoration-line-through me-2 opacity-75" v-if="singleProduct.discount === true">{{ singleProduct.price }}</p>
